@@ -37,17 +37,30 @@ Gradle:
 Comparing helper as a `Component` (`Bean`) versus purely `Static` helpers:
 
 ```
-2023-10-01T11:56:11.544-05:00  INFO 8556 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-10-01T11:56:11.544-05:00  INFO 8556 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-10-01T11:56:11.545-05:00  INFO 8556 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-10-01T11:56:11.594-05:00  INFO 8556 --- [nio-8080-exec-1] i.t.s.helpers.ExampleStaticHelper        : testStaticHelper
-2023-10-01T11:56:11.595-05:00  INFO 8556 --- [nio-8080-exec-1] i.t.springexps.helpers.JvmHeapHelper     : heapSize: 58720256 heapMaxSize: 8573157376 heapFreeSize: 45701896
-2023-10-01T11:56:11.595-05:00  INFO 8556 --- [nio-8080-exec-1] i.t.springexps.helpers.JvmHeapHelper     : Garbage collecting...
-2023-10-01T11:56:11.616-05:00  INFO 8556 --- [nio-8080-exec-1] i.t.springexps.helpers.JvmHeapHelper     : Sleeping for 5s...
-2023-10-01T11:56:16.620-05:00  INFO 8556 --- [nio-8080-exec-1] i.t.s.helpers.ExampleComponentHelper     : testComponentHelper
-2023-10-01T11:56:16.620-05:00  INFO 8556 --- [nio-8080-exec-1] i.t.springexps.helpers.JvmHeapHelper     : heapSize: 58720256 heapMaxSize: 8573157376 heapFreeSize: 45647384
-2023-10-01T11:56:16.620-05:00  INFO 8556 --- [nio-8080-exec-1] i.t.springexps.helpers.JvmHeapHelper     : Garbage collecting...
-2023-10-01T11:56:16.641-05:00  INFO 8556 --- [nio-8080-exec-1] i.t.springexps.helpers.JvmHeapHelper     : Sleeping for 5s...
+2023-10-01T12:28:27.528-05:00  INFO 16004 --- [           main] io.thoughtscript.springexps.App          : No active profile set, falling back to 1 default profile: "default"
+2023-10-01T12:28:28.196-05:00  INFO 16004 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-01T12:28:28.203-05:00  INFO 16004 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-01T12:28:28.203-05:00  INFO 16004 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-01T12:28:28.270-05:00  INFO 16004 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-01T12:28:28.271-05:00  INFO 16004 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 700 ms
+2023-10-01T12:28:28.489-05:00  INFO 16004 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-01T12:28:28.496-05:00  INFO 16004 --- [           main] io.thoughtscript.springexps.App          : Started App in 1.255 seconds (process running for 1.471)
+2023-10-01T12:28:32.937-05:00  INFO 16004 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-01T12:28:32.937-05:00  INFO 16004 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-01T12:28:32.937-05:00  INFO 16004 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-10-01T12:28:32.953-05:00  INFO 16004 --- [nio-8080-exec-1] i.t.springexps.helpers.JvmHeapHelper     : heapSize: 71303168 heapMaxSize: 8573157376 heapFreeSize: 55056704
+2023-10-01T12:28:32.954-05:00  INFO 16004 --- [nio-8080-exec-1] i.t.springexps.helpers.JvmHeapHelper     : Garbage collecting...
+2023-10-01T12:28:32.983-05:00  INFO 16004 --- [nio-8080-exec-1] i.t.springexps.helpers.JvmHeapHelper     : Sleeping for 5s...
+2023-10-01T12:28:37.985-05:00  INFO 16004 --- [nio-8080-exec-1] i.t.s.helpers.ExampleStaticHelper        : testStaticHelper
+2023-10-01T12:28:37.985-05:00  INFO 16004 --- [nio-8080-exec-1] i.t.s.helpers.ExampleStaticHelper        : Time taken 0
+2023-10-01T12:28:37.985-05:00  INFO 16004 --- [nio-8080-exec-1] i.t.springexps.helpers.JvmHeapHelper     : heapSize: 58720256 heapMaxSize: 8573157376 heapFreeSize: 45596680
+2023-10-01T12:28:37.985-05:00  INFO 16004 --- [nio-8080-exec-1] i.t.springexps.helpers.JvmHeapHelper     : Garbage collecting...
+2023-10-01T12:28:38.007-05:00  INFO 16004 --- [nio-8080-exec-1] i.t.springexps.helpers.JvmHeapHelper     : Sleeping for 5s...
+2023-10-01T12:28:43.022-05:00  INFO 16004 --- [nio-8080-exec-1] i.t.s.helpers.ExampleComponentHelper     : testComponentHelper
+2023-10-01T12:28:43.022-05:00  INFO 16004 --- [nio-8080-exec-1] i.t.s.helpers.ExampleComponentHelper     : Time taken 0
+2023-10-01T12:28:43.022-05:00  INFO 16004 --- [nio-8080-exec-1] i.t.springexps.helpers.JvmHeapHelper     : heapSize: 58720256 heapMaxSize: 8573157376 heapFreeSize: 45708992
+2023-10-01T12:28:43.022-05:00  INFO 16004 --- [nio-8080-exec-1] i.t.springexps.helpers.JvmHeapHelper     : Garbage collecting...
+2023-10-01T12:28:43.044-05:00  INFO 16004 --- [nio-8080-exec-1] i.t.springexps.helpers.JvmHeapHelper     : Sleeping for 5s...
 ```
 
 ## Resources and Shoutouts

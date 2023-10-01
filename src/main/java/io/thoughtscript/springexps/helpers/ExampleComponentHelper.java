@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import static io.thoughtscript.springexps.helpers.JvmHeapHelper.printHeap;
@@ -17,6 +18,7 @@ public class ExampleComponentHelper {
     public Example testComponentHelper() throws InterruptedException {
 
         log.info("testComponentHelper");
+        Date begin = new Date();
 
         // Create in memory within the Component method.
         List<ExampleListItem> exampleList = new ArrayList<>();
@@ -27,6 +29,9 @@ public class ExampleComponentHelper {
         exampleList.add(exampleListItemB);
         exampleList.add(exampleListItemC);
         Example example = new Example("example", exampleList);
+
+        Date end = new Date();
+        log.info("Time taken {}", end.getTime() - begin.getTime());
         printHeap();
 
         return example;

@@ -4,12 +4,16 @@ import io.thoughtscript.springexps.dtos.Example;
 import io.thoughtscript.springexps.dtos.ExampleListItem;
 import io.thoughtscript.springexps.helpers.ExampleComponentHelper;
 import io.thoughtscript.springexps.helpers.ExampleStaticHelper;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static io.thoughtscript.springexps.helpers.JvmHeapHelper.printHeap;
+
+@Slf4j
 @Service
 public class ExampleService {
 
@@ -29,7 +33,7 @@ public class ExampleService {
     }
 
     public void TestHelpers() throws InterruptedException {
-        System.gc();
+        printHeap();
         ExampleStaticHelper.testStaticHelper();
         exampleComponentHelper.testComponentHelper();
     }
