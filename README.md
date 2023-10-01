@@ -34,7 +34,7 @@ Gradle:
 
 ## Testing
 
-Comparing helper as Component versus Static helpers:
+Comparing helper as a `Component` (`Bean`) versus purely `Static` helpers:
 
 ```
 2023-10-01T11:56:11.544-05:00  INFO 8556 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
