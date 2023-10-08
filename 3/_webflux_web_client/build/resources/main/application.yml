@@ -1,0 +1,52 @@
+server:
+  port: 8080
+  tomcat:
+    max-connections: 200
+    # Tomcat thread pool
+    threads:
+      min: 2
+      max: 4
+  #ssl:
+    #key-store-type: PKCS12
+    #key-store: src/main/resources/interviewhelper.p12
+    #key-store-password:
+
+spring:
+  task:
+    execution:
+      pool:
+        core-size: 2
+        max-size: 4
+
+  # Enable auth
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: aaaaaaa
+    password: aaaaaaa
+    properties:
+      mail:
+        debug: true
+        transport:
+          protocol: smtp
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  data:
+    mongodb:
+      port: 27017
+      host: localhost
+
+  redis:
+    port: 6379
+    host: localhost
+
+  rabbitmq:
+    port: 5672
+    host: localhost
+
+logging:
+  level:
+    org.springframework.web: DEBUG

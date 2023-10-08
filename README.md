@@ -10,9 +10,10 @@ Experiments with Java Spring.
 ## Experiments
 
 1. Resolving some questions around YAML dot notation: `property.fieldname.key: 1` in Java Spring config.
-1. Verifying JVM overhead for `@Component`-based helpers and `Static Class` helpers.
+2. Verifying JVM overhead for `@Component`-based helpers and `Static Class` helpers.
    * [Findings](2/_findings/Findings.md)
-2. Putting the alleged performance improvements of WebFlux WebClient to the test within a non-blocking app.
+3. Putting the alleged performance improvements of WebFlux WebClient to the test within a non-blocking app.
+   * [Findings](3/_findings//README.md)
 
 ## Licensing and Use
 

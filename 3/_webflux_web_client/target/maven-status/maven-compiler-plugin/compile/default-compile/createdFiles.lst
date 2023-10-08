@@ -1,0 +1,5 @@
+io\thoughtscript\example\Application.class
+io\thoughtscript\example\controllers\LanguageReactiveRestController.class
+io\thoughtscript\example\services\ReactiveWebService.class
+io\thoughtscript\example\configurations\WebFluxConfiguration.class
+io\thoughtscript\example\domain\ToDo.class
