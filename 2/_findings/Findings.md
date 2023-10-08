@@ -2,23 +2,38 @@
 
 `700` consecutive requests from Postman using [YourKit](https://www.yourkit.com/) Profiler and logging.
 
-Static helpers are definitely better. Use `Beans`` sparingly (of course).
+Static helpers appear to be a better choice in the following specific circumstances:
+ 
+* Preference for memory optimization.
+* Latency optimization.
+* Less variance between Highest and Lowest Response Times.
+
+Looks like `Components` win (but well-within the acceptable deviation/variability rates):
+
+* With a slight gain in CPU performance.
+* Better overall Response Times.
+
+Common sense suggests one should use `Beans` sparingly. If one is not using a `Component`-Heavy Design Pattern necessitated by say `@Repository` `Classes` (e.g. - when working with persistent data that must be mapped via an Object-Relational Mapping Framework), one should probably prefer simply `Static Helpers` in the light of the above (barring certain specific considerations).
 
 ## Components
 
-Using `@Component`` based helpers only: 
+Using `@Component` based helpers only: 
 
-`2023-10-07T20:42:21.051-05:00  INFO 1692 --- [nio-8080-exec-8] i.t.s.helpers.ExampleComponentHelper     : heapSize: 71303168 heapMaxSize: 8573157376 heapFreeSize: 40954384`
+`2023-10-07T21:08:33.944-05:00  INFO 21712 --- [nio-8080-exec-5] i.t.s.helpers.ExampleComponentHelper     : heapSize: 75497472 heapMaxSize: 8573157376 heapFreeSize: 46056608`
 
-[![](Components.png)](Components.png)
+| Avg. CPU Time | Committed Memory | Used Memory | Heap Free (Logging) | Total Time (700 Request) | Avg. JSP Call Duration | Threads | 
+| --- | --- | --- | --- | --- | --- | --- |
+| 3.83%   |   72  | 27.78 | 46056608 | 1656 | 3 | 22 | 
 
 ## Static Helpers
 
 Using `Static` helpers only: 
 
-`2023-10-07T20:50:07.373-05:00  INFO 21104 --- [nio-8080-exec-5] i.t.s.helpers.ExampleStaticHelper        : heapSize: 79691776 heapMaxSize: 8573157376 heapFreeSize: 56225664`
+`2023-10-07T21:19:30.316-05:00  INFO 11816 --- [nio-8080-exec-5] i.t.s.helpers.ExampleStaticHelper        : heapSize: 79691776 heapMaxSize: 8573157376 heapFreeSize: 55739696`
 
-[![](Static.png)](Static.png)
+| Avg. CPU Time | Committed Memory | Used Memory | Heap Free (Logging) | Total Time (700 Request) | Avg. JSP Call Duration | Threads | 
+| --- | --- | --- | --- | --- | --- | --- |
+| 4.97%   |   76  | 19.81 | 55739696 | 1783 | 2 | 22 | 
 
 ## Combined
 

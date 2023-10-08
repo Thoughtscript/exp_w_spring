@@ -1,6 +1,6 @@
 # YAML Dot Notation Test
 
-Testing whether dot notation can be used without concern in Spring application.yml config files.
+Testing whether dot notation can be used without concern in Spring `application.yml` config files.
 
 `String`, `int`, `List`, and `Map`.
 
