@@ -1,0 +1,8 @@
+io\thoughtscript\springexps\controllers\ExampleRestController.class
+io\thoughtscript\springexps\helpers\ExampleStaticHelper.class
+io\thoughtscript\springexps\dtos\Example.class
+io\thoughtscript\springexps\App.class
+io\thoughtscript\springexps\dtos\ExampleListItem.class
+io\thoughtscript\springexps\helpers\JvmHeapHelper.class
+io\thoughtscript\springexps\services\ExampleService.class
+io\thoughtscript\springexps\helpers\ExampleComponentHelper.class

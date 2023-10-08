@@ -1,0 +1,10 @@
+test.example.stringOne: stringOne
+test.example.string2: string2
+test.example.stringList: 1,2,3,4,5
+test.example.number: 1
+test.example.map.1: 1
+test.example.map.2: 2
+test.example.another.stringA: stringA
+test.example.another.stringB: stringB
+test.example.another.stringC: stringC
+test.example.another.stringD: stringD

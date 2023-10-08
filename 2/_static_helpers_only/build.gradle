@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-parent', version: '3.1.4', ext: 'pom'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '3.1.4'
+
+    // These are required for Gradle - thought JAXB was part of the spring-boot-starter-parent dependency tree? (Maven gets this automatically)
+    implementation 'jakarta.xml.bind:jakarta.xml.bind-api:2.3.3'
+    annotationProcessor 'jakarta.xml.bind:jakarta.xml.bind-api:2.3.3'
+    // Also, must use the annotationProcessor notation for Lombok.
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+}
+
+application {
+    mainClassName = 'io.thoughtscript.springexps.App'
+}
