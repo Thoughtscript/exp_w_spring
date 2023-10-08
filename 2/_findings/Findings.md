@@ -6,12 +6,12 @@ Static helpers appear to be a better choice in the following specific circumstan
  
 * Preference for memory optimization.
 * Latency optimization.
-* Less variance between Highest and Lowest Response Times.
 
 Looks like `Components` win (but well-within the acceptable deviation/variability rates):
 
 * With a slight gain in CPU performance.
 * Better overall Response Times.
+* Less variance between Highest and Lowest Response Times.
 
 Common sense suggests one should use `Beans` sparingly. If one is not using a `Component`-Heavy Design Pattern necessitated by say `@Repository` `Classes` (e.g. - when working with persistent data that must be mapped via an Object-Relational Mapping Framework), one should probably prefer simply `Static Helpers` in the light of the above (barring certain specific considerations).
 
