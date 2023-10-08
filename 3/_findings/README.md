@@ -14,11 +14,11 @@ Interesting:
 
 | Fully Reactive | Blocking Client Non Reactive | Reactive WebClient in Non Reactive |
 | --- | --- | --- |
-| 33127 | 33210 | 28097 |
+| 31022 | 33210 | 28097 |
 
 Slightly counter-intuitive: The hybrid of the two outperformed the others in sequential Requests.
 
-There's almost no difference between a fully Reactive and Non-Reactive ("blocking") app. That might be partly explained by the fact that Reactive apps benefit more from concurrent back-pressure.
+There's only a slight improvement between a fully Reactive and Non-Reactive ("blocking") app. That only slight gain might be partly explained by the fact that Reactive apps benefit more from concurrent back-pressure.
 
 ## Concurrent
 
@@ -33,7 +33,7 @@ Concurrent Request Testing:
 
 | Combination | Throughput | Avg. Response Time |
 | --- | --- | --- |
-| Fully Reactive  | 17.73 | 31 |
+| Fully Reactive  | 17.88 | 32 |
 | Blocking Client Non Reactive | 17.75 | 30 |
 | Reactive WebClient in Non Reactive | 17.74 | 30 |
 
