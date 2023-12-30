@@ -29,6 +29,9 @@ public class TestConfig {
 
     private Map<String, String> map;
 
+    @Value("${valid.yaml}")
+    private String yamlString;
+
     /*
     Expect these to fail
 

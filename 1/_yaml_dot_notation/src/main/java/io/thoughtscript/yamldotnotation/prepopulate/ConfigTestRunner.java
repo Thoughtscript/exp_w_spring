@@ -31,6 +31,7 @@ public class ConfigTestRunner {
         log.info(String.valueOf(testConfig.getNumber()));
         log.info(testConfig.getMap().toString());
         log.info(stringB);
+        log.info(testConfig.getYamlString());
 
         /*
         log.info(stringC);

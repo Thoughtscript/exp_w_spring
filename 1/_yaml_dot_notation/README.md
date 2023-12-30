@@ -66,22 +66,25 @@ Partial dot notation cannot be used outside an `@ConfigurationProperties` annota
 For the rest:
 
 ```
-2023-10-07T20:09:39.056-05:00  INFO 17452 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-10-07T20:09:39.063-05:00  INFO 17452 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-10-07T20:09:39.063-05:00  INFO 17452 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-10-07T20:09:39.131-05:00  INFO 17452 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-10-07T20:09:39.132-05:00  INFO 17452 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 551 ms
-2023-10-07T20:09:39.185-05:00  INFO 17452 --- [           main] i.t.y.prepopulate.ConfigTestRunner       : stringOne
-2023-10-07T20:09:39.185-05:00  INFO 17452 --- [           main] i.t.y.prepopulate.ConfigTestRunner       : string2
-2023-10-07T20:09:39.185-05:00  INFO 17452 --- [           main] i.t.y.prepopulate.ConfigTestRunner       : [1, 2, 3, 4, 5]
-2023-10-07T20:09:39.185-05:00  INFO 17452 --- [           main] i.t.y.prepopulate.ConfigTestRunner       : 1
-2023-10-07T20:09:39.185-05:00  INFO 17452 --- [           main] i.t.y.prepopulate.ConfigTestRunner       : {1=1, 2=2}
-2023-10-07T20:09:39.185-05:00  INFO 17452 --- [           main] i.t.y.prepopulate.ConfigTestRunner       : stringB
-2023-10-07T20:09:39.320-05:00  INFO 17452 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-10-07T20:09:39.325-05:00  INFO 17452 --- [           main] io.thoughtscript.yamldotnotation.App     : Started App in 1.035 seconds (process running for 1.241)
+2023-12-30T14:58:27.072-06:00  INFO 8980 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-12-30T14:58:27.079-06:00  INFO 8980 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-30T14:58:27.079-06:00  INFO 8980 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-12-30T14:58:27.139-06:00  INFO 8980 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-30T14:58:27.140-06:00  INFO 8980 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 680 ms
+2023-12-30T14:58:27.195-06:00  INFO 8980 --- [           main] i.t.y.prepopulate.ConfigTestRunner       : stringOne
+2023-12-30T14:58:27.196-06:00  INFO 8980 --- [           main] i.t.y.prepopulate.ConfigTestRunner       : string2
+2023-12-30T14:58:27.196-06:00  INFO 8980 --- [           main] i.t.y.prepopulate.ConfigTestRunner       : [1, 2, 3, 4, 5]
+2023-12-30T14:58:27.196-06:00  INFO 8980 --- [           main] i.t.y.prepopulate.ConfigTestRunner       : 1
+2023-12-30T14:58:27.196-06:00  INFO 8980 --- [           main] i.t.y.prepopulate.ConfigTestRunner       : {1=1, 2=2}
+2023-12-30T14:58:27.196-06:00  INFO 8980 --- [           main] i.t.y.prepopulate.ConfigTestRunner       : stringB
+2023-12-30T14:58:27.196-06:00  INFO 8980 --- [           main] i.t.y.prepopulate.ConfigTestRunner       : yamlString
+2023-12-30T14:58:27.390-06:00  INFO 8980 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-30T14:58:27.397-06:00  INFO 8980 --- [           main] io.thoughtscript.yamldotnotation.App     : Started App in 1.265 seconds (process running for 1.482)
 ```
 
 For partial dot notation use a `Map` - it's fully supported. One can also use a fully qualified dot path within the `@ConfigurationProperties` annotated `Bean` regardless of the specified `prefix`.
+
+> Note too that valid YAML can be used simultaneously with dot notation in the same `Properties` file and even within the same `@ConfigurationProperties`.
 
 ## Resources and Links
 

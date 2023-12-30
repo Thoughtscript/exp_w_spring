@@ -8,3 +8,6 @@ test.example.another.stringA: stringA
 test.example.another.stringB: stringB
 test.example.another.stringC: stringC
 test.example.another.stringD: stringD
+
+valid:
+  yaml: yamlString
