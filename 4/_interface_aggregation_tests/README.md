@@ -47,7 +47,3 @@ done
 2023-12-30T14:38:12.737-06:00  INFO 17508 --- [nio-8080-exec-1] i.t.bootexample.services.ExampleService  : ======== Static Tests ========
 2023-12-30T14:38:12.737-06:00  INFO 17508 --- [nio-8080-exec-1] i.t.bootexample.interfaces.A$B$C         : staticName
 ```
-
-## Resources and Links
-
-- https://reflectoring.io/spring-resttemplate/
