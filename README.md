@@ -14,6 +14,7 @@ Experiments with Java Spring.
    * [Findings](2/_findings/Findings.md)
 3. Putting the alleged performance improvements of WebFlux WebClient to the test within a non-blocking app.
    * [Findings](3/_findings//README.md)
+4. Testing Aggregated Interface Implementations along with some limitations, constraints, etc.
 
 ## Licensing and Use
 
